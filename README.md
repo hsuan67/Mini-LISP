@@ -11,13 +11,23 @@
 8. **Named Function**: Able to declare and call a named function
 
 ## Usage
+
 ### compile bison
+
 bison -d -o y.tab.c LISP.y
+
 gcc -c -g -I.. y.tab.c
+
 ### compile flex
+
 flex -o lex.yy.c LISP.l
+
 gcc -c -g -I.. lex.yy.c
+
 ### compile and link bison and flex
+
 gcc -o LISP y.tab.o lex.yy.o -ll
+
 ### run exe
+
 ./LISP
